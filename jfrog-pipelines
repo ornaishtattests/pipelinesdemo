@@ -1,0 +1,15 @@
+resources:
+  - name: repo_demo
+    type: GitRepo
+    configuration:
+      gitProvider: ornaishtat_tests
+      path: ornaishtattests/pipelinesdemo
+
+pipelines:
+  - name: demoPipelines-TEST
+    steps:
+      - name: demoStep_1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "Hello world!!"
