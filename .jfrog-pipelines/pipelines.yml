@@ -6,7 +6,7 @@ resources:
       path: ornaishtattests/pipelinesdemo
 
 pipelines:
-  - name: demoPipelines-TEST
+  - name: demoPipelinesTEST
     steps:
       - name: demoStep_1
         type: Bash
