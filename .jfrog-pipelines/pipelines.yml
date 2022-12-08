@@ -10,6 +10,10 @@ pipelines:
     configuration:
       environmentVariables:
         readOnly:
+          env1:
+            allowCustom: true
+            default: "value1"
+          env2: "value2"
     
     steps:
       - name: demoStep_1
