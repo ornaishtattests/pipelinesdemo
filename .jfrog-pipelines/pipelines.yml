@@ -9,9 +9,9 @@ pipelines:
   - name: demoPipelinesTEST
     configuration:
       readOnly:
-      environmentVariables:
-        JFROG_CLI_BUILD_NAME: "pipelines build name"
-        JFROG_CLI_BUILD_NUMBER: "${run_id}"
+        environmentVariables:
+          JFROG_CLI_BUILD_NAME: "pipelines build name"
+          JFROG_CLI_BUILD_NUMBER: "${run_id}"
     steps:
       - name: demoStep_1
         type: Bash
