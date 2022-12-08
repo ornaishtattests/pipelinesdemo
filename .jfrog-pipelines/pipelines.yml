@@ -8,13 +8,17 @@ resources:
 pipelines:
   - name: demoPipelinesTEST
     configuration:
-      readOnly:
-        environmentVariables:
-          JFROG_CLI_BUILD_NAME: "pipelines build name"
-          JFROG_CLI_BUILD_NUMBER: "${run_id}"
+      environmentVariables:
+        readOnly:
+    
     steps:
       - name: demoStep_1
         type: Bash
+        configuration:
+          environmentVariables:
+            JFROG_CLI_BUILD_NAME: "pipelines build name"
+            JFROG_CLI_BUILD_NUMBER: "${run_id}"
+
         execution:
           onStart:
             - echo "Start message!"
