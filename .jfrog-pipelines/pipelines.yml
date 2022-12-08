@@ -8,7 +8,7 @@ resources:
 pipelines:
   - name: demoPipelinesTEST
     configuration:
-      environmenVariables:
+      environmentVariables:
       JFROG_CLI_BUILD_NAME: "pipelines build name"
       JFROG_CLI_BUILD_NUMBER: "${run_id}"
     steps:
