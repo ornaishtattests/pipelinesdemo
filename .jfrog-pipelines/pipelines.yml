@@ -28,7 +28,7 @@ pipelines:
             - echo "Start message!"
           onExecute:
             - echo "Hello world!!"
-            - echo ${JFROG_CLI_BUILD_NUMBER}
+            - echo $JFROG_CLI_BUILD_NUMBER
           onComplete:
             - echo "Completed! does not mean success of failure but only that it's completed!"
 
