@@ -11,6 +11,10 @@ pipelines:
       - name: demoStep_1
         type: Bash
         execution:
+          onStart:
+            - echo "Start message!"
           onExecute:
             - echo "Hello world!!"
+          onComplete:
+            - echo "Completed! does not mean success of failure but only that it's completed!"
 
