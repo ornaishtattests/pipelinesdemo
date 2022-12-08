@@ -7,6 +7,10 @@ resources:
 
 pipelines:
   - name: demoPipelinesTEST
+    configuration:
+      environmenVariables:
+      JFROG_CLI_BUILD_NAME: "pipelines build name"
+      JFROG_CLI_BUILD_NUMBER: "${run_id}"
     steps:
       - name: demoStep_1
         type: Bash
@@ -15,6 +19,7 @@ pipelines:
             - echo "Start message!"
           onExecute:
             - echo "Hello world!!"
+            - echo $JFROG_CLI_BUILD_NUMBER
           onComplete:
             - echo "Completed! does not mean success of failure but only that it's completed!"
 
